@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <style>
+        h1{text-align: left; font-family: arial black; font-size: 25px;}
+        body{background-color: blue;}
+        </style>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title style="text-color: red;">워드카운트</title>
+
+   </head>
+   <body>
+      <h1 style="text-emphasis-color: red;">워드카운트입니다. {{ name }}</h1>
+      단어의수 : {{text|length}}<br><br>
+
+      {% for i in text %}
+      {{ i }}<br />
+      {% endfor %}
+
+      <form method="GET" action="/result/">
+         <textarea type="text" name="text" style="text-shadow: chartreuse;"></textarea>
+            <button type="submit" style="background-color: salmon;">전송</button>
+        </form>
+   </body>
+</html>
